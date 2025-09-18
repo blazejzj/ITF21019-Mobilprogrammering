@@ -1,7 +1,8 @@
-import { StyleSheet, View } from "react-native";
-import ProductCard from "./components/ProductCard";
+import { StyleSheet } from "react-native";
 import { type Product } from "./types";
 import ProductList from "./components/ProductList";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import ProductCookieClicker from "./components/ProductCookieClicker";
 
 const product: Product = {
     id: "1",
@@ -33,10 +34,11 @@ const products: Product[] = [
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            {/* <ProductCard product={product} /> */}
-            <ProductList products={products} />
-        </View>
+        <SafeAreaProvider>
+            <SafeAreaView style={{ flex: 1 }}>
+                <ProductCookieClicker />
+            </SafeAreaView>
+        </SafeAreaProvider>
     );
 }
 

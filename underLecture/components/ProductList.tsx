@@ -1,6 +1,7 @@
 import { FlatList, StyleSheet } from "react-native";
 import type { Product } from "../types";
 import ProductCard from "./ProductCard";
+import PressableCard from "./PressableCard";
 
 export default function ProductList({ products }: { products: Product[] }) {
     return (
@@ -14,7 +15,7 @@ export default function ProductList({ products }: { products: Product[] }) {
         <FlatList
             data={products}
             keyExtractor={(item) => item.id}
-            renderItem={({ item }) => <ProductCard product={item} />}
+            renderItem={({ item }) => <PressableCard product={item} />}
             style={styles.list}
             contentContainerStyle={styles.content}
         />

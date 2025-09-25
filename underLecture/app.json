@@ -1,4 +1,9 @@
 {
-  "name": "underLecture",
-  "slug": "underLecture"
+    "name": "underLecture",
+    "slug": "underLecture",
+    "expo": {
+        "web": {
+            "bundler": "metro"
+        }
+    }
 }
